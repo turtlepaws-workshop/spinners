@@ -124,12 +124,12 @@ const Home: NextPage = () => {
             name="Turtlepaw"
             website="https://trtle.xyz/"
           />
-          <Contributer
+          {/*<Contributer
             avatar="https://github.com/tobiasahlin.png"
             github="https://github.com/tobiasahlin"
             name="Tobias Ahlin"
             website="https://tobiasahlin.com/"
-          />
+          />*/}
         </div>
         <p className='text-muted'>More spinners coming soon!</p>
       </div>
