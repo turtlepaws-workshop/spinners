@@ -29,10 +29,10 @@ function Contributer({ name, avatar, github, website }) {
       <div className='name'>{name}</div>
       <div className='links icons'>
         <a className="link" href={github} target='_blank' rel='noopener noreferrer'>
-          <img src="/Github.svg" className='icon hover'/>
+          <img src="/Github.svg" className='icon hover' />
         </a>
         <a className="link" href={website} target='_blank' rel='noopener noreferrer'>
-          <img src="/Website.svg" className='icon hover'/>
+          <img src="/Website.svg" className='icon hover' />
         </a>
       </div>
     </div>
@@ -73,8 +73,24 @@ const Home: NextPage = () => {
   const [viewing, setViewing] = useState<Spinner>();
   return (
     <div>
-      <h1 className="title">Spinners</h1>
-      <p className="text-muted description">Hover on a spinner to start the animation.</p>
+      <div>
+        <div style={{
+          paddingTop: "3rem"
+        }}>
+          <p className='text-muted' style={{ display: "flex" }}>
+            <Image style={{ display: "inline-block" }} src="/Party.png" alt='Rocket Emoji' width={25} height={10} />
+            <span style={{ paddingLeft: "0.3rem" }}>More spinners will be arriving soon!</span>
+          </p>
+        </div>
+        <h1 className="title" style={{ display: "flex" }}>
+          <Image style={{ display: "inline-block" }} src="/Rocket.png" alt='Rocket Emoji' width={70} height={45} />
+          <span style={{ paddingLeft: "1rem" }}>CSS Spinners</span>
+        </h1>
+        <p className="text-muted description" style={{ display: "flex", paddingTop: "0.5rem" }}>
+          <Image style={{ display: "inline-block" }} src="/Information.png" alt='Rocket Emoji' width={25} height={10} />
+          <span style={{ paddingLeft: "0.3rem" }}>Hover on a spinner to start the animation.</span>
+        </p>
+      </div>
       <div className="container">
         {
           Object.keys(spinners).map((key: string) => {
@@ -115,8 +131,11 @@ const Home: NextPage = () => {
         </Modal>
       </div>
       <div>
-        <h1 className='title'>❤️ Credits</h1>
-        <p className='text-muted description'>Thanks to those who made some of these and contributed!</p>
+        <h1 className='title' style={{ display: "flex" }}>
+          <Image style={{ display: "inline-block" }} src="/Star.png" alt='Rocket Emoji' width={60} height={20} />
+          <span style={{ paddingLeft: "1rem" }}>Credits</span>
+        </h1>
+        <p className='text-muted description'>Thanks to the people below who have made some of these!</p>
         <div>
           <Contributer
             avatar="https://github.com/turtlepaw.png"
@@ -131,8 +150,11 @@ const Home: NextPage = () => {
             website="https://tobiasahlin.com/"
           />*/}
         </div>
-        <p className='text-muted'>More spinners coming soon!</p>
       </div>
+      <p className='text-muted' style={{ display: "flex" }}>
+        <Image style={{ display: "inline-block" }} src="/Party.png" alt='Rocket Emoji' width={25} height={10} />
+        <span style={{ paddingLeft: "0.3rem" }}>More spinners will coming soon!</span>
+      </p>
     </div>
   )
 }
